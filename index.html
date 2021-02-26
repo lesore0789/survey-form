@@ -16,106 +16,114 @@
 </head>
 
 <body>
- <div class="container">
-  <!-- Title Header -->
-  <header>
-   <h1 id="title" class="text-center">Orepiro Web Services Survey</h1>
-   <p id="description" class="text-center">Thank you for taking the time to help us provide better solutions for you</p>
-  </header>
- </div>
- <form id="survey-form">
-  <!-- Name -->
-  <div class="form-group">
-   <label id="name-label" for="name">Name</label>
-   <input type="text" name='name' id='name' class='form-control' placeholder="Enter your name" required />
+  <div class="container">
+    <header class="header">
+      <h1 id="title" class="text-center">Are Your Alien Needs Being Met?</h1>
+      <p id="description" class="description text-center">
+        Thank you for taking the time to help us improve the Galactic Association of Friendly Travelers
+      </p>
+    </header>
+    <form id="survey-form">
+      <div class="form-group">  
+      <label for="name" id="name-label">Name</label>
+        <input type='text' name='name' id = 'name' class='form-control' placeholder='Enter Your Name' required />
+        
+      </div>
+      <div class="form-group">
+        <label for="email" id="email-label">Email</label>
+        <input type="email" name="email" id="email" class="form-control" placeholder="Enter Your Email" required />
+      </div>
+      <div class="form-group">
+        <label for="number" id="number-label">Age</label>
+        <input type="number"
+               name="age"
+               id="number"
+               min="5"
+               max="999999"
+               class="form-control"
+               placeholder="Your Age (in Earth Years)">
+        
+      </div>
+      <div class="form-group current-role"></div>
+      <p>Which option best describes your current role?</p>
+      <select id="dropdown" name="role" class="form-control" required>
+        <option disabled selected value>Select Current Role</option>
+        <option value="guide">Spiritual Guide</option>
+          <option value="sitter">Baby sitter</option>
+          <option value="teacher">High School Teacher</option>
+          <option value="Scientist">Scientist</option>
+          <option value="friend">Friend</option>
+      </select>
+      <div class="form-group"><p>Would you recommend traveling to this side of the galaxy?</p>
+        <label>
+          <input type="radio"
+                 name="user-recommend"
+                 class="input-radio" checked value="definitely">Definitely
+        </label>
+        <label>
+          <input type="radio"
+                 name="user-recommend"
+                 value="maybe"
+                 class="input-radio">Maybe
+        </label>
+        <label>
+          <input type="radio"
+                 name="user-recommend"
+                 value="not-sure"
+                 class="input-radio">Not Sure
+        </label>
+      </div>
+      <div class="form-group"><p>What is/are your favorite feature(s) of this Planet?</p>
+        <label>
+          <input type="checkbox"
+                 name="fave"  value="little-sandwiches" class="input-checkbox"/> little sandwiches</label>
+        
+        <label><input type="checkbox" name="fave" value="smart-dolphins" class="input-checkbox"/> the intelligence of dolphins</label>
+        <label><input type="checkbox"
+                      name="fave" value="netflix" class="input-checkbox"/> Netflix</label>
+        
+        <label><input type="checkbox"
+                      name="fave" value="drugs" class="input-checkbox"/> mind-altering drugs</label>
+        <label><input type="checkbox"
+                      name="fave" value="time-travel-exclusivity" class="input-checkbox"/> Time Travel Exclusivity</label>
+        <label><input type="checkbox"
+                      name="fave" value="socks" class="input-checkbox"/> socks</label>
+        <label><input type="checkbox"
+                      name="fave" value="ocean" class="input-checkbox"/> the ocean</label>
+        <label><input type="checkbox"
+                      name="fave" value="fornication" class="input-checkbox"/> Fornication</label>
+        <label><input type="checkbox"
+                      name="fave" value="laughter" class="input-checkbox"/> Laughing</label> 
+        <label><input type="checkbox"
+                      name="fave" value="croissants" class="input-checkbox"/> Croissants</label> 
+        <label><input type="checkbox"
+                      name="fave" value="music" class="input-checkbox"/> The Music</label> 
+        <label><input type="checkbox"
+                      name="fave" value="sunset-sunrise" class="input-checkbox"/> Sunsets/Sunrises </label>
+        <label><input type="checkbox"
+                      name="fave" value="puppies" class="input-checkbox"/> puppies</label>
+      </div>
+      <div class="form-group">
+        <p>Any comments or suggestions?</p>
+        <textarea
+          id="comments"
+          class="input-textarea"
+          name="comment"
+          placeholder="Enter your comment here..."
+        ></textarea>
+      </div>
+  
+      <div class="form-group">
+        <button type="submit" id="submit" class="submit-button">
+          Submit
+        </button>
+      </div>
+    </form>
   </div>
-
-  <!-- Email -->
-  <div class="form-group">
-   <label id="email-label" for="email">Email</label>
-   <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required />
-  </div>
-
-  <!-- Age -->
-  <div class="form-group">
-   <label id="number-label" for="number">Age(optional)</label>
-   <input type="number" name="age" id="number" min="10" max="99" class="form-control" placeholder="Age" />
-  </div>
-
-  <!-- Role -->
-  <div class="form-group">
-   <p>Which option best describes your role with us</p>
-   <select id="dropdown" name="role" class="form-control" required>
-    <option disabled selected value>Select current role</option>
-    <option value="Currently working together">Currently working together</option>
-    <option value="past">Have worked with in the past</option>
-    <option value="future">Expected to work with in future</option>
-    <option value="preferNo">Prefer not to say</option>
-    <option value="other">Other</option>
-   </select>
-  </div>
-
-  <!-- Recommendation -->
-  <div class="form-group">
-   <p>Would you recommend Orepiro Web Services to a friend?</p>
-   <label>
-    <input name="user-recommend" value="definitely" type="radio" class="input-radio" checked />Definitely</label>
-   <label>
-    <input name="user-recommend" value="maybe" type="radio" class="input-radio" />Maybe</label>
-   <label><input name="user-recommend" value="not-sure" type="radio" class="input-radio" />Not sure</label>
-  </div>
-
-  <!-- Features -->
-  <div class="form-group">
-   <p>
-    What is your favorite feature we offer?
-   </p>
-   <select id="fave" name="fave" class="form-control" required>
-    <option disabled selected value>Select an option</option>
-    <option value="hosting">Web Hosting</option>
-    <option value="management">Website Management</option>
-    <option value="design">Website Design</option>
-    <option value="consult">Website Consultations</option>
-   </select>
-  </div>
-
-  <!-- Improvements -->
-  <div class="form-group">
-   <p>
-    What would you like to see improved?
-    <span class="clue">(Check all that apply)</span>
-   </p>
-
-   <label><input name="prefer" value="Flat-fee-packages" type="checkbox" class="input-checkbox" />Flat fee
-    packages</label>
-   <label>
-    <input name="prefer" value="database-management" type="checkbox" class="input-checkbox" />Database
-    Management</label>
-   <label><input name="prefer" value="server-storage" type="checkbox" class="input-checkbox" />Server Storage</label>
-   <label><input name="prefer" value="full-stack-management" type="checkbox" class="input-checkbox" />Full Stack
-    Management</label>
-   <label><input name="prefer" value="referral-incentives" type="checkbox" class="input-checkbox" />Referral
-    Incentives</label>
-   <label><input name="prefer" value="videos" type="checkbox" class="input-checkbox" /> How to Videos</label>
-   <label><input name="prefer" value="User-interface-Consultations" type="checkbox" class="input-checkbox" />User
-    interface consultations</label>
-   <label><input name="prefer" value="Software Consultations" type="checkbox" class="input-checkbox" />Software
-    Consultations</label>
-   <label><input name="prefer" value="Blog Posts" type="checkbox" class="input-checkbox" />Blog Posts</label>
-
-  </div>
-  <!-- Comments -->
-  <div class="form-group">
-   <p>Any comments or suggestions?</p>
-   <textarea id="comments" name="comment" placeholder="Enter your comment here..."></textarea>
-  </div>
-
-  <div class="form-group">
-   <button type="submit" id="submit" class="submit-button">
-    Submit
-   </button>
-  </div>
- </form>
+  
+  
+  
+  
 
  <!-- Run Tests -->
  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>

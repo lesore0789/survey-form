@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+.container {
+  width: 50%;
+  margin: 5rem auto 5rem auto;
+  padding: 2rem;
+  background-color: rgba(255,255,255, 0.7);
+  border-radius: 25px;
+  font-family: 'Space Mono', monospace;
+}
+
+body::before {
+  box-sizing: border-box;
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-image:    url(https://i.imgur.com/aPXkKnU.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+h1,
+p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.current-role{
+  margin-left:12rem;
+  margin-right:3rem;
+}
+
+label {
+  display: flex;
+  align-items: center;
+/*   font-size: 1.125rem; */
+  margin-bottom: 0.5rem;
+}
+
+input,
+button,
+select,
+textarea {
+  margin-right:10px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.form-group {
+  margin: 1rem
+}
+button {
+  border: none;
+}
+.input-textarea {
+  min-height: 120px;
+  width: 100%;
+  padding: 0.625rem;
+  resize: vertical;
+}
